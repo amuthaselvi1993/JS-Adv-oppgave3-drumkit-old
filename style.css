@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Bona Nova SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h3 {
+  font-size: 3em;
+  color: brown;
+  padding: 20px;
+}
+#drum-container {
+  display: grid;
+  width: 100vw;
+  margin-top: 100px;
+  margin-bottom: 10px;
+  grid-template-columns: 1.5fr repeat(6, 0.5fr) 1.5fr;
+  grid-template-rows: 0.5fr 1fr 1fr;
+}
+#clap {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+#hihat {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+#openhat {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 7;
+  grid-column-end: 8;
+}
+#ride {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 6;
+  grid-column-end: 7;
+}
+#tink {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+#snare {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+#tom {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 5;
+  grid-column-end: 6;
+}
+#kick {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 5;
+  grid-column-end: 6;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+}
+.display {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+.highlight-sound {
+  transform: scale(1.1);
+}
+.shortcut {
+  font-size: 0.8em;
+}
+@media only screen and (max-width: 600px) {
+  #drum-container {
+    display: flex;
+    flex-direction: column;
+  }
+  #kick {
+    flex-direction: column;
+  }
+}
